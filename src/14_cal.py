@@ -31,23 +31,27 @@ import sys
 import calendar
 from datetime import datetime
 
-print(sys.argv)
+arg_length = len(sys.argv)
+
 current_time = datetime.today()
-args_length = len(sys.argv)
+current_year = current_time.year
+current_month = current_time.month
 
-if args_length == 1:
-  month = current_time.month
-  year = current_time.year
-  print(calendar.monthcalendar(year, month))
+if arg_length == 1:
+    print(calendar.monthcalendar(current_year, current_month))
 
-if args_length == 2:
-  month = int(sys.argv[1])
-  year = current_time.year
-  print(calendar.monthcalendar( year, month))
+if arg_length == 2:
+    if sys.argv[1].isnumeric() and int(sys.argv[1]) < 13:
+        intMonth = int(sys.argv[1])
+        print(calendar.monthcalendar(current_year, intMonth))
+    else:
+        print("Please run 14_cal.py with arguments in numeric calender format for example `python 14_cal.py 1 1993`")
 
-if args_length == 3:
-  month = int(sys.argv[1])
-  year = int(sys.argv[2])
-  print(calendar.monthcalendar(year, month))
-
-
+if arg_length == 3:
+    if sys.argv[1].isnumeric() and int(sys.argv[1]) < 13:
+        intMonth = int(sys.argv[1])
+    if sys.argv[2].isnumeric():
+        intYear = int(sys.argv[2])
+        print(calendar.monthcalendar(intYear, intMonth))
+    else:
+        print("Please run 14_cal.py with arguments in numeric calender format for example `python 14_cal.py 1 1993`")
