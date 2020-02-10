@@ -1,4 +1,5 @@
 import random
+import sys
 
 
 def switching(json, n, nx):
@@ -32,3 +33,6 @@ def quickSort(json, attribute):
     start = 0
     length = len(json)
     quickSortIteration(json, attribute, start, length)
+
+
+quickSort(sys.argv[1], sys.argv[2])
