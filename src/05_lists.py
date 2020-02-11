@@ -20,6 +20,9 @@ print(x)
 # YOUR CODE HERE
 x.remove(8)
 print(x)
+# remove will remove the first occurances of that value
+# pop - you can also add index
+# del - x[i] - will delete that index
 
 # Change x so that it is [1, 2, 3, 4, 9, 99, 10]
 # YOUR CODE HERE

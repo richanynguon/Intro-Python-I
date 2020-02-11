@@ -7,6 +7,8 @@ def switching(json, n, nx):
     json[n] = json[nx]
     json[nx] = objectHolder
 
+## json[n], json[nx] = json[nx], json[n]
+
 
 def nextPivot(json, attribute, start, length, currentPivotIndex):
     currentPivotObject = json[currentPivotIndex]
@@ -22,7 +24,7 @@ def nextPivot(json, attribute, start, length, currentPivotIndex):
 
 def quickSortIteration(json, attribute, start, length):
     if (length-1) > start:
-        global pivotIndex
+        pivotIndex
         pivotIndex = start + (round(random.random()) * (length - start))
         pivotIndex = nextPivot(json, attribute, start, length, pivotIndex)
         quickSortIteration(json, attribute, start, pivotIndex)
@@ -36,3 +38,6 @@ def quickSort(json, attribute):
 
 
 quickSort(sys.argv[1], sys.argv[2])
+
+
+## use snake_case instead of camelCase

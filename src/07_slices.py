@@ -16,6 +16,9 @@ print(a[1])
 
 # Output the second-to-last element: 9
 print(a[len(a)-2])
+#print(a[-2]) - same result 
+#print(a[-5:]) last 5 elements
+#print(a[-1::-1]) reverse list -- a[start, index, step]
 
 # Output the last three elements in the array: [7, 9, 6]
 print(a[3:])
